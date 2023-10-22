@@ -7,11 +7,14 @@ describe('Search for Flight', () => {
           describe('Then the search page is loaded with the same data added previously', () => {
             it('Test', () => {
               cy.viewport(1524, 900)
-              cy.visit('/')   
-              homePageObject.searchForFlight("John F. Kennedy International Airport", "Berlin", "Mon Oct 30 2023");
-              cy.url().should('include', '/search/');
-              homePageObject.validateDataInputPreviously('John F. Kennedy International Airport', "Berlin", "Mon, October 30", "2 passengers");            
+              cy.visit('/')
+              cy.fixture('example.json').then((data) => {
+                const { origin, destination, departureDate, passenger } = data;
+                homePageObject.searchForFlight(origin, destination, departureDate);
+                cy.url().should('include', '/search/');
+                homePageObject.validateDataInputPreviously(origin, destination, "Mon, October 30", passenger);            
             })
+           })
           })
         })
     })
