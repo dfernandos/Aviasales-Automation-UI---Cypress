@@ -40,7 +40,7 @@ Tests are written in JavaScrip with Cypress framework [Cypress](https://www.cypr
  - Install:
    - [NodeJS >=14](https://nodejs.org/en/)
    - Project dependency setup  
-     - `cd ./botaprarodar-web` 
+     - `cd ./automation-project-cypress` 
      - `npm install` 
 
 ### How to run the tests
