@@ -40,7 +40,7 @@ Tests are written in JavaScrip with Cypress framework [Cypress](https://www.cypr
  - Install:
    - [NodeJS >=14](https://nodejs.org/en/)
    - Project dependency setup  
-     - `cd ./automation-project-cypress` 
+     - `cd Aviasales-Automation-UI---Cypress/` 
      - `npm install` 
 
 ### How to run the tests
